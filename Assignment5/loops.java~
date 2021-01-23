@@ -1,0 +1,69 @@
+
+/**
+ * Write a description of class loops here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+import java.util.Scanner;
+
+public class loops
+{
+
+}
+// needed for Scanner class
+import java.util.Scanner;
+
+// class PracticeLoops
+public class PracticeLoops
+{
+    public static void main(String[]args)
+    {
+        // associate a Scanner with the keyboard
+        Scanner keyboard = new Scanner(System.in);
+        // introdue section A to users
+        System.out.println("          ------ Section A ------");
+        System.out.println("(while) loop prints values 1 through 5, then 5 down to 1");
+        System.out.println("Each set of numbers appears on its own line,tab distance apart");        
+        System.out.println("========================================================================");
+        // declare and initialize the variable x and give condition and update
+        int x = 1;
+        while(x < 6)
+        {System.out.printf("%d\t",x);
+            x++;
+        }
+        System.out.println();
+        // declare and initialize the variable y and give condition and update
+        int y = 5;
+        while(y > 0)
+        {System.out.printf("%d\t",y);
+            y--;
+        }
+        System.out.println();
+        System.out.println("________________________________________________________________________");
+
+        
+        int num = 354235;
+        do{
+            if (num != 354235)
+            {
+                System.out.println("Error:  number must be odd and between 1 and 5, inclusive.");    
+            }
+            System.out.print("Enter a number to use for Part B loops: ");
+            num = keyboard.nextInt();
+            System.out.println();
+        }
+        while(num % 2 == 0 && (1 < num || 5 > num));
+
+        String pattern = "v^v";
+        String monday = "Monday";
+        while(num >= 1)
+        {
+            num--;
+            monday = monday + pattern;
+            //System.out.println(monday + "Friday");
+
+        }
+        System.out.println(monday + "Friday");
+    }
+}
